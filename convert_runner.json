@@ -1,0 +1,5 @@
+{
+    "csv_separator": "\t",
+    "active_loggers": ["file", "console"],
+    "log_format": "%(asctime)s - %(levelname)s - %(message)s"
+}
