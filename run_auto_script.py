@@ -135,7 +135,7 @@ def main():
     parser.add_argument('--run-path', type=str, help='Working path for command execution.')
     args = parser.parse_args()
 
-    config = load_config('config.json')
+    config = load_config('run_auto_script')
     TEST_SCRIPTS_PATH = config['TEST_SCRIPTS_PATH']
     LOG_PATH = config['LOG_PATH']
     RESULTS_PATH = config['RESULTS_PATH']

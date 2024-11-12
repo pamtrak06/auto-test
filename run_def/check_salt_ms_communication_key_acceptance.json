@@ -1,0 +1,27 @@
+{
+    "command": "./docker-compose.sh exec salt_master salt-key -L",
+    "path": "NA",
+    "timeout": 3000,
+    "description": "Check key acceptance: Check if the syndic's key is in the 'Accepted Keys' list.",
+    "expected_result": {
+        "return_code" : {
+            "enabled" : "true",
+            "value" : 0
+        },
+        "output" : {
+            "enabled" : "true",
+            "value" : "salt_syndic[1-2]"
+        },
+        "timeout" : {
+            "enabled" : "false"
+        },
+        "additionnal_check" : {
+            "enabled" : "false",
+            "values" : {
+                "value" : "",
+                "value" : "",
+                "value" : ""
+            }
+        }
+    }
+}

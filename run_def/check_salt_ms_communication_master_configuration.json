@@ -1,0 +1,27 @@
+{
+    "command": "./docker-compose.sh exec salt_master cat /etc/salt/master",
+    "path": "NA",
+    "timeout": 1000,
+    "description": "Check master configuration: Ensure that order_masters is set to True on the master.",
+    "expected_result": {
+        "return_code" : {
+            "enabled" : "true",
+            "value" : 0
+        },
+        "output" : {
+            "enabled" : "true",
+            "value" : "order_masters:.*True"
+        },
+        "timeout" : {
+            "enabled" : "false"
+        },
+        "additionnal_check" : {
+            "enabled" : "false",
+            "values" : {
+                "value" : "",
+                "value" : "",
+                "value" : ""
+            }
+        }
+    }
+}

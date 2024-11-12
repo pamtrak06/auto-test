@@ -1,5 +1,9 @@
 {
+    "log_path": "./_logs",
+    "results_path": "./_outputs",
+    "filter_tests": ".*",
+    "log_level": "INFO",
+    "log_output": "file,console",
     "csv_separator": "\t",
-    "active_loggers": ["file", "console"],
-    "log_format": "%(asctime)s - %(levelname)s - %(message)s"
+    "output_base_name": "test_definitions"
 }

@@ -1,0 +1,27 @@
+{
+    "command": "./docker-compose.sh exec salt_syndic1 cat /etc/salt/master",
+    "path": "NA",
+    "timeout": 3000,
+    "description": "Check syndic configuration: Check if syndic_master is correctly set to the master's address.",
+    "expected_result": {
+        "return_code" : {
+            "enabled" : "true",
+            "value" : 0
+        },
+        "output" : {
+            "enabled" : "true",
+            "value" : "syndic_master:.*True"
+        },
+        "timeout" : {
+            "enabled" : "false"
+        },
+        "additionnal_check" : {
+            "enabled" : "false",
+            "values" : {
+                "value" : "",
+                "value" : "",
+                "value" : ""
+            }
+        }
+    }
+}

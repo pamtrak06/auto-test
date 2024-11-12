@@ -1,0 +1,27 @@
+{
+    "command": "./docker-compose.sh exec salt_master tail -n 100 /var/log/salt/master",
+    "path": "NA",
+    "timeout": 2000,
+    "description": "Check master logs for any related errors.",
+    "expected_result": {
+        "return_code" : {
+            "enabled" : "true",
+            "value" : 0
+        },
+        "output" : {
+            "enabled" : "true",
+            "value" : "^(?!.*\b(ERROR|CRITICAL)\b).*"
+        },
+        "timeout" : {
+            "enabled" : "false"
+        },
+        "additionnal_check" : {
+            "enabled" : "false",
+            "values" : {
+                "value" : "",
+                "value" : "",
+                "value" : ""
+            }
+        }
+    }
+}
